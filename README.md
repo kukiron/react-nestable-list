@@ -29,10 +29,16 @@ To run the app: clone the repo & install the dependencies
 > npm start
 ```
 
-To run the app inside a docker container
+To run the app inside a docker container build the image
 
 ```shell
 > docker-compose up -d --build
+```
+
+To stop the docker container
+
+```shell
+> docker-compose stop
 ```
 
 In either case, head to `localhost:3000` once the build is finished
