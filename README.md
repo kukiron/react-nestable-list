@@ -2,6 +2,8 @@
 
 Nestable drag & drop list with React and Redux.
 
+## **[Demo](https://react-nestable-list.com)**
+
 ## App Description
 
 This app shows a list of employees representing employee -> supervisor relationship in a company.
