@@ -2,7 +2,7 @@
 
 Nestable drag & drop list with React and Redux.
 
-## **[Demo](https://react-nestable-list.com)**
+## **[Demo](https://react-nestable-list.herokuapp.com/)**
 
 ## App Description
 
