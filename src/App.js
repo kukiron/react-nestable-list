@@ -8,9 +8,7 @@ import { removeList } from "./actions"
 import { loadFromLocalStorage } from "./tools/utils"
 
 class App extends Component {
-  state = {
-    list: loadFromLocalStorage()
-  }
+  state = { list: loadFromLocalStorage() }
 
   handleListChange = list => this.setState({ list })
 
@@ -19,15 +17,13 @@ class App extends Component {
     return form && form.elements["collapsed"].checked
   }
 
-  renderItem = ({ item, collapseIcon, handler }) => {
-    return (
-      <div className="drag-item">
-        {handler}
-        {collapseIcon}
-        <b>{item.text}</b>: <span>{item.position}</span>
-      </div>
-    )
-  }
+  renderItem = ({ item, collapseIcon, handler }) => (
+    <div className="drag-item">
+      {handler}
+      {collapseIcon}
+      <b>{item.text}</b>: <span>{item.position}</span>
+    </div>
+  )
 
   // remove list
   handleClick = () => {
@@ -67,9 +63,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return { employeeList: state.employeeList }
-}
+const mapStateToProps = ({ employeeList }) => ({ employeeList })
 
 export default connect(
   mapStateToProps,

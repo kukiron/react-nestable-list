@@ -9,8 +9,8 @@ class LoadJson extends Component {
 
   handleFile = e => {
     const obj = JSON.parse(e.target.result)
-    const employeeList = formatData(obj)
-    this.setState({ list: employeeList }, () => {
+    const list = formatData(obj)
+    this.setState({ list }, () => {
       this.props.updateList(this.state.list)
     })
   }
