@@ -60,7 +60,11 @@ export const formatData = object => {
 }
 
 export const loadFromLocalStorage = () =>
-  localStorage.length ? JSON.parse(localStorage["employeeList"]) : []
+  // for dev: if localStorage already has data from before at the port
+  // then it won't work, so putting a check for it
+  localStorage.length && localStorage["employeeList"]
+    ? JSON.parse(localStorage["employeeList"])
+    : []
 
 export const isJson = str => {
   const filetype = "json"
