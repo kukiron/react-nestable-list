@@ -12,11 +12,6 @@ class App extends Component {
 
   handleListChange = list => this.setState({ list })
 
-  isCollapsed = () => {
-    const form = document.forms[0] || null
-    return form && form.elements["collapsed"].checked
-  }
-
   renderItem = ({ item, collapseIcon, handler }) => (
     <div className="drag-item">
       {handler}
